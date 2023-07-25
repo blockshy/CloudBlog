@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.204.150:8848
+    gateway:
+      routes:
+        - id: blog-module
+          uri: lb:http://blog-module
+          predicates:
+            - Path=/api/blog/**
+          filters:
+            - RewritePath=/api/blog/(?<segment>/?.*),/$\{segment}
+
+  application:
+    name: gateway-module
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
