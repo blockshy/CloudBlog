@@ -7,12 +7,21 @@ spring:
         server-addr: 192.168.204.150:8848
     gateway:
       routes:
-        - id: blog-module
-          uri: lb:http://blog-module
-          predicates:
-            - Path=/api/blog/**
-          filters:
-            - RewritePath=/api/blog/(?<segment>/?.*),/$\{segment}
+#        - id: blog-module
+#          uri: lb:http://blog-module
+#          predicates:
+#            - Path=/api/blog/**
+#          filters:
+#            - RewritePath=/api/(?<segment>/?.*),/$\{segment}
+#
+#        - id: authentication-module
+#          uri: lb:http://authentication-module
+#          predicates:
+#            - Path=/api/authentication/login/**
+#            - Path=/api/authentication/register/**
+#          filters:
+#            - RewritePath=/api/(?<segment>/?.*),/$\{segment}
+
 
   application:
     name: gateway-module
@@ -22,3 +31,7 @@ management:
     web:
       exposure:
         include: '*'
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE

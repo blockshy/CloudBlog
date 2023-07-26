@@ -12,9 +12,11 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/cloudblog_blog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
 
 mybatis:
   mapper-locations: classpath:mappers/*xml
   type-aliases-package: com.huyu.mybatis.entity
-
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true

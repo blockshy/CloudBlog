@@ -8,6 +8,8 @@
         <option value="$PROJECT_DIR$/common-module/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/blog-module/pom.xml" />
+        <option value="$PROJECT_DIR$/authentication-module/pom.xml" />
+        <option value="$PROJECT_DIR$/user-module/pom.xml" />
       </list>
     </option>
   </component>

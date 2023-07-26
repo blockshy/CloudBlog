@@ -1,7 +1,10 @@
 # 项目开发信息记录
 ## 端口号
 前端view-module 8079
-gateway-module 8080
+网关gateway-module 8080
+blog-module 8081
+user-module 8082
+authentication-module 8083
 
 # 项目书
 ## 一 需求
@@ -40,7 +43,14 @@ gateway-module 8080
 
 ## 二 系统架构
 ## 1 系统整体技术栈
-Springboot、Vue、SpringCloud Alibaba Nacos、SpringCloud Gateway、SpringCloud OpenFeign、SpringCloud Alibaba RocketMQ、SpringCloud Alibaba Sentinel、SpringCloud Alibaba Seata
+Springboot 2.4.2
+Vue3(3.2.13)
+SpringCloud Alibaba Nacos 1.4.1
+SpringCloud Gateway 3.0.3  自行导入负载均衡loadbalancer 3.0.3 以解决Gateway配置中使用lb负载均衡报错的问题
+SpringCloud OpenFeign 3.0.3
+SpringCloud Alibaba RocketMQ 4.4.0
+SpringCloud Alibaba Sentinel 1.8.0
+SpringCloud Alibaba Seata 1.3.0
 ## 2 系统技术架构图
 
 

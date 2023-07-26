@@ -1,11 +1,14 @@
 package com.huyu;
 
+import com.huyu.config.GatewayConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
+@EnableConfigurationProperties(GatewayConfig.class)
 public class GatewayModuleApplication {
 
     public static void main(String[] args) {
