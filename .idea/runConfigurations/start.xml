@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="start" type="CompoundRunConfigurationType">
+    <toRun name="AuthenticationModuleApplication" type="SpringBootApplicationConfigurationType" />
+    <toRun name="BlogModuleApplication" type="SpringBootApplicationConfigurationType" />
+    <toRun name="GatewayModuleApplication" type="SpringBootApplicationConfigurationType" />
+    <toRun name="UserModuleApplication" type="SpringBootApplicationConfigurationType" />
+    <method v="2" />
+  </configuration>
+</component>

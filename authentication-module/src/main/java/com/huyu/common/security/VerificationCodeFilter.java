@@ -27,7 +27,7 @@ public class VerificationCodeFilter extends GenericFilter {
         System.out.println("req.getMethod():"+req.getMethod());
         System.out.println("req.getServletPath():"+req.getServletPath());
         //只处理登录注册请求的验证码验证
-        if("POST".equals(req.getMethod()) && ("/user/login".equals(req.getServletPath()) || "/user/register".equals(req.getServletPath()))){
+        if("POST".equals(req.getMethod()) && ("/authorization/login".equals(req.getServletPath()) || "/authorization/register".equals(req.getServletPath()))){
             //登录请求
             String code = req.getParameter("verificationCode");
             System.out.println("verificationCode:"+code);
@@ -35,7 +35,7 @@ public class VerificationCodeFilter extends GenericFilter {
                 //验证码错误
                 res.setContentType("application/json;charset=utf-8");
                 PrintWriter out = res.getWriter();
-                out.write("/user/login".equals(req.getServletPath()) ?
+                out.write("/authorization/login".equals(req.getServletPath()) ?
                         JSON.toJSONString(R.error(ReturnCode.LOGIN_ERROR_VERIFICATION_CODE_ERROR,"验证码错误！")) :
                         JSON.toJSONString(R.error(ReturnCode.REGISTER_ERROR_VERIFICATION_CODE_ERROR,"验证码错误！")));
                 out.flush();
